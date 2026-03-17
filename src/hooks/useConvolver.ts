@@ -84,6 +84,10 @@ export function useConvolver() {
       streamRef.current.getTracks().forEach((t) => t.stop());
     }
 
+    // Fade in to prevent initial burst
+    graph.inputGain.gain.setValueAtTime(0, graph.ctx.currentTime);
+    graph.inputGain.gain.linearRampToValueAtTime(1, graph.ctx.currentTime + 0.5);
+
     const stream = await navigator.mediaDevices.getUserMedia({
       audio: {
         echoCancellation: true,
