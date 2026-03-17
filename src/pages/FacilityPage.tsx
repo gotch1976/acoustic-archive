@@ -104,22 +104,14 @@ export function FacilityPage() {
       </header>
 
       <div className="max-w-2xl mx-auto px-4 py-8 space-y-8">
-        {/* Hero image */}
+        {/* Hero image - always show facility hero */}
         <section className="relative overflow-hidden rounded-xl">
           <img
-            src={currentSpace.imagePath}
-            alt={currentSpace.name}
+            src={facility.heroImage}
+            alt={facility.name}
             className="w-full h-48 md:h-64 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
-          <div className="absolute bottom-4 left-4">
-            <div className="text-lg font-medium text-white">
-              {currentSpace.heroLabel ?? currentSpace.name}
-            </div>
-            <div className="text-xs text-neutral-400">
-              {currentSpace.heroLabelEn ?? currentSpace.nameEn}
-            </div>
-          </div>
         </section>
 
         <SpaceSelector
