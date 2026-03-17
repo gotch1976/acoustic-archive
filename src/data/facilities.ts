@@ -1,0 +1,102 @@
+import type { Facility, Sample } from "./types";
+
+export const DEFAULT_SAMPLES: Sample[] = [
+  { id: "clap", name: "手拍子", icon: "👏" },
+  { id: "snare", name: "スネア", icon: "🥁" },
+  { id: "piano", name: "ピアノ", icon: "🎹" },
+];
+
+export const FACILITIES: Facility[] = [
+  {
+    slug: "tomakomai-civic-hall",
+    name: "苫小牧市民会館",
+    nameEn: "Tomakomai Civic Hall",
+    category: "lost",
+    description:
+      "苫小牧市民会館は1974年に開館し、多くの市民に親しまれた文化施設です。ここでは、その空間に残された響きを体験できます。",
+    heroImage: "/facilities/tomakomai-civic-hall/hero.jpg",
+    spaces: [
+      {
+        id: "foyer-1f",
+        name: "ホワイエ 1F",
+        nameEn: "Foyer 1F",
+        irPath: "/facilities/tomakomai-civic-hall/ir/foyer-1f.wav",
+        imagePath: "/facilities/tomakomai-civic-hall/images/foyer.jpg",
+        heroLabel: "ホワイエ",
+        heroLabelEn: "Foyer",
+      },
+      {
+        id: "foyer-2f",
+        name: "ホワイエ 2F",
+        nameEn: "Foyer 2F",
+        irPath: "/facilities/tomakomai-civic-hall/ir/foyer-2f.wav",
+        imagePath: "/facilities/tomakomai-civic-hall/images/foyer.jpg",
+        heroLabel: "ホワイエ",
+        heroLabelEn: "Foyer",
+      },
+      {
+        id: "small-hall-13m",
+        name: "小ホール（13m）",
+        nameEn: "Small Hall (13m)",
+        irPath: "/facilities/tomakomai-civic-hall/ir/small-hall-13m.wav",
+        imagePath: "/facilities/tomakomai-civic-hall/images/small-hall.jpg",
+        heroLabel: "小ホール",
+        heroLabelEn: "Small Hall",
+      },
+      {
+        id: "small-hall-9m",
+        name: "小ホール（9m）",
+        nameEn: "Small Hall (9m)",
+        irPath: "/facilities/tomakomai-civic-hall/ir/small-hall-9m.wav",
+        imagePath: "/facilities/tomakomai-civic-hall/images/small-hall.jpg",
+        heroLabel: "小ホール",
+        heroLabelEn: "Small Hall",
+      },
+      {
+        id: "main-hall-1f-7m",
+        name: "大ホール 1F（7m）",
+        nameEn: "Main Hall 1F (7m)",
+        irPath: "/facilities/tomakomai-civic-hall/ir/main-hall-1f-7m.wav",
+        imagePath: "/facilities/tomakomai-civic-hall/images/main-hall.jpg",
+        heroLabel: "大ホール",
+        heroLabelEn: "Main Hall",
+      },
+      {
+        id: "main-hall-1f-13m",
+        name: "大ホール 1F（13m）",
+        nameEn: "Main Hall 1F (13m)",
+        irPath: "/facilities/tomakomai-civic-hall/ir/main-hall-1f-13m.wav",
+        imagePath: "/facilities/tomakomai-civic-hall/images/main-hall.jpg",
+        heroLabel: "大ホール",
+        heroLabelEn: "Main Hall",
+      },
+      {
+        id: "main-hall-1f-19m",
+        name: "大ホール 1F（19m）",
+        nameEn: "Main Hall 1F (19m)",
+        irPath: "/facilities/tomakomai-civic-hall/ir/main-hall-1f-19m.wav",
+        imagePath: "/facilities/tomakomai-civic-hall/images/main-hall.jpg",
+        heroLabel: "大ホール",
+        heroLabelEn: "Main Hall",
+      },
+      {
+        id: "main-hall-2f-25m",
+        name: "大ホール 2F（25m）",
+        nameEn: "Main Hall 2F (25m)",
+        irPath: "/facilities/tomakomai-civic-hall/ir/main-hall-2f-25m.wav",
+        imagePath: "/facilities/tomakomai-civic-hall/images/main-hall.jpg",
+        heroLabel: "大ホール",
+        heroLabelEn: "Main Hall",
+      },
+      {
+        id: "main-hall-2f-31m",
+        name: "大ホール 2F（31m）",
+        nameEn: "Main Hall 2F (31m)",
+        irPath: "/facilities/tomakomai-civic-hall/ir/main-hall-2f-31m.wav",
+        imagePath: "/facilities/tomakomai-civic-hall/images/main-hall.jpg",
+        heroLabel: "大ホール",
+        heroLabelEn: "Main Hall",
+      },
+    ],
+  },
+];
