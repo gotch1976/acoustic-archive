@@ -10,6 +10,9 @@ export function MicButton({ micActive, irLoaded, onToggle }: Props) {
       <h2 className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
         この空間の響きを体験する
       </h2>
+      <p className="text-xs text-neutral-500 mb-4">
+        🎧 イヤホン・ヘッドホンを装着してご体験ください
+      </p>
 
       <button
         onClick={onToggle}

@@ -18,20 +18,20 @@ export function useConvolver() {
   const [irLoaded, setIrLoaded] = useState(false);
   const [micActive, setMicActive] = useState(false);
   const [samplePlaying, setSamplePlaying] = useState(false);
-  const [wetDry, setWetDry] = useState(0.30);
+  const [wetDry, setWetDry] = useState(0.20);
   const [currentIr, setCurrentIr] = useState<string>("");
 
   const ensureGraph = useCallback((): AudioGraph => {
     if (graphRef.current) return graphRef.current;
 
-    const ctx = new AudioContext({ sampleRate: 48000 });
+    const ctx = new AudioContext();
     const convolver = ctx.createConvolver();
     const dryGain = ctx.createGain();
     const wetGain = ctx.createGain();
     const inputGain = ctx.createGain();
 
-    dryGain.gain.value = 0.70;
-    wetGain.gain.value = 0.30;
+    dryGain.gain.value = 0.80;
+    wetGain.gain.value = 0.20;
 
     inputGain.connect(dryGain);
     inputGain.connect(convolver);
@@ -84,7 +84,13 @@ export function useConvolver() {
       streamRef.current.getTracks().forEach((t) => t.stop());
     }
 
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const stream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: true,
+        noiseSuppression: true,
+        autoGainControl: true,
+      },
+    });
     streamRef.current = stream;
     const micSource = graph.ctx.createMediaStreamSource(stream);
     micSource.connect(graph.inputGain);
