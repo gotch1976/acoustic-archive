@@ -10,7 +10,7 @@ export function CategoryBadge({ category }: { category: FacilityCategory }) {
 
   return (
     <span
-      className={`inline-block px-3 py-1 rounded-full text-xs tracking-wider ${styles}`}
+      className={`inline-block px-3 py-1 rounded-full text-xs tracking-wider uppercase ${styles}`}
     >
       {label}
     </span>

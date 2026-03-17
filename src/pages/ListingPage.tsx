@@ -8,7 +8,7 @@ export function ListingPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <header className="text-center mb-12">
-        <h1 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-3">
+        <h1 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-3 uppercase">
           Acoustic Archive
         </h1>
         <p className="text-sm text-neutral-500 leading-relaxed">
